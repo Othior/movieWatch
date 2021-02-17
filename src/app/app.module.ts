@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MovieComponent } from './movie/movie.component';
 import { AddComponent } from './movie/add/add.component';
 import { EditComponent } from './movie/edit/edit.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EditComponent } from './movie/edit/edit.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
