@@ -1,0 +1,39 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50vw;
+    margin: auto;
+    margin-top: 2rem;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: #8E39E3;
+}
+.listMovie{
+    width:70%;
+    height: auto;
+    color: white;
+}
+.randMovie{
+    margin: 0rem 1rem;
+}
+.blockMovie{
+    margin: 4rem 0rem;
+}
+.editMovie ,.deleteMovie{
+    padding: 0rem 10px;
+}
+li{
+    list-style-type: none;
+}
+.movies{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+    text-align: left;
+}

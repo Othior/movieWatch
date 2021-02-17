@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #221F26; 
+    font-family: 'Segoe UI';
+}
+header{
+    background-color: #8E39E3;
+    color: white;
+    font-size: 3em;
+    padding: 2rem;
+    font-style: italic;
+    font-weight: bold;
+    /* border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px; */
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50vw;
+    margin: auto;
+    margin-top: 2rem;
+}
+.btn{
+    color: white;
+    background-color: #8E39E3;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+}
+.btn:hover{
+    background-color: #39363D;
+    color: #8E39E3;
+}
+a{
+    text-decoration: none;
+}
+button{
+    border: none;
+}
+input{
+    border: none;
+    padding: 1rem 2rem;
+    border-top-left-radius:50px;
+    border-bottom-left-radius:50px;
+    outline: none;
+}
+

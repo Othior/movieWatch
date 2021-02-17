@@ -1,0 +1,30 @@
+.blockMovie{
+    margin: 4rem 0rem;
+}
+.blockAddMovie{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+}
+.btnAddMovie{
+    border: none;
+    border : 1px solid #8E39E3;
+    border-top-right-radius:50px;
+    border-bottom-right-radius:50px;
+    border-top-left-radius:0px;
+    border-bottom-left-radius:0px;
+    width: 20%;
+}
+.btnAddMovie:hover{
+    border : 1px solid #39363D;
+}
+label{
+    text-align: center;
+    color: white;
+    margin: 2rem 0rem;
+    font-size: 2em;
+}
+.titleMovie{
+    width: 80%;
+}
