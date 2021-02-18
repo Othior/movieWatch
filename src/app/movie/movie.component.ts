@@ -9,8 +9,10 @@ import { MovieService } from '../service/movie.service';
 })
 export class MovieComponent implements OnInit {
 
-  
+
   public listMovie = [];
+  private nbRand: number;
+  private movie: string = "";
 
   constructor(
     private service: MovieService,
@@ -20,15 +22,15 @@ export class MovieComponent implements OnInit {
   ngOnInit(): void {
     this.service.getList().then(data => {
       data.forEach(doc => {
-        // console.log(doc.id,' =>' , doc.data().title);
+        console.log(doc.id, ' =>', doc.data());
         this.listMovie.push(doc.data().title);
       });
     });
   }
-  
-  public editMovie(id: string){
 
-    localStorage.setItem("titleId",JSON.stringify(id));
+  public editMovie(id: string) {
+
+    localStorage.setItem("titleId", JSON.stringify(id));
     this.router.navigate(['/edit-movie']);
 
   }
@@ -39,12 +41,30 @@ export class MovieComponent implements OnInit {
 
     this.service.deleteMovie(id);
 
-    setTimeout(()=>{
+    setTimeout(() => {
       alert("the movies is deleted");
       window.location.reload();
-    },1000);
+    }, 1000);
 
   }
-  // public listMovie: Array<string> = this.service.toWatch;
+
+  public randomMovie() {
+
+    // console.log('movie => ', this.listMovie[this.nbRand]);
+    // console.log('id => ', this.nbRand);
+    
+    setTimeout(() => {
+      this.nbRand = this.random(this.listMovie.length);
+      console.log('movie settimeout => ', this.listMovie[this.nbRand]);
+      console.log('id settimeout => ', this.nbRand);
+      alert(this.listMovie[this.nbRand] + ' see you soon :D');
+      this.nbRand = 0;
+    }, 2000)
+    
+  }
+
+  public random(numberMax: number){
+    return this.nbRand = Math.floor((Math.random() * numberMax-1) + 1);
+  }
 
 }

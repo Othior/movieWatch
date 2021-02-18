@@ -1,7 +1,7 @@
 <div class="container">
     <div class="blockMovie">
         <a class="btn addMovie" [routerLink]="['/add-movie']" >Add Movie</a>
-        <a class="btn randMovie" >Random Movie</a>
+        <a class="btn randMovie" (click)="randomMovie()">Random Movie</a>
     </div>
     <div class="listMovie">
         <ul>
