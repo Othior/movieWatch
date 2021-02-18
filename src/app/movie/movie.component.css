@@ -21,7 +21,7 @@ a:hover{
     color: #8E39E3;
 }
 .listMovie{
-    width:70%;
+    width:40vw;
     height: auto;
     color: white;
 }
@@ -30,6 +30,10 @@ a:hover{
 }
 .blockMovie{
     margin: 4rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .editMovie ,.deleteMovie{
     padding: 0rem 10px;
@@ -40,6 +44,73 @@ li{
 .movies{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 2rem;
     text-align: left;
+    padding-bottom: 1rem;
+    border-bottom:1px solid #8E39E3;
+}
+.movies span{
+    display: flex;
+}
+.blockMovie a:first-child {
+    margin-left: 1rem;
+}
+@media screen and (min-width:880px) and (max-width:1130px){
+    .container{
+        width: 80vw;
+        /* background-color: yellow */
+    }
+    .blockMovie{
+        /* font-size: 25px; */
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem 0rem;
+    }
+    .blockMovie a{
+        margin: 1rem 0rem;
+    }
+    .listMovie{
+        width: 60vw;
+    }
+}
+
+@media screen and (min-width:500px) and (max-width:880px){
+    .container{
+        width: 80vw;
+        /* background-color: yellow */
+    }
+    .blockMovie{
+        /* font-size: 25px; */
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem 0rem;
+    }
+    .blockMovie a{
+        margin: 1rem 0rem;
+    }
+    .listMovie{
+        width: 60vw;
+    }
+}
+@media screen and (min-width:300px) and (max-width:680px){
+    .container{
+        width: 90vw;
+    }
+    .blockMovie{
+        /* font-size: 25px; */
+        flex-direction: column;
+        align-items: center;
+        margin: 2rem 0rem;
+    }
+    .blockMovie a{
+        margin: 1rem 0rem;
+    }
+    .movies{
+        margin: 2rem 0rem;
+    }
+    .listMovie{
+        width: 70vw;
+    }
+    
 }

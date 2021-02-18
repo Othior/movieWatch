@@ -31,3 +31,6 @@ label{
 .blockInput{
     margin: 2rem 0rem;
 }
+@media screen and(min-width:552px) and (max-width:1000px){
+    
+}
