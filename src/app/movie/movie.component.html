@@ -7,7 +7,7 @@
         <ul>
             <li class="movies" *ngFor="let movies of listMovie"> {{ movies }} 
                 <span id="id_{{ movies }}">
-                    <!-- <a class="editMovie" (click)="editMovie(movies)"><i class="fas fa-pencil-alt"></i></a>  -->
+                    <a class="editMovie" (click)="editMovie(movies)"><i class="fas fa-pencil-alt"></i></a> 
                     <a class="deleteMovie" (click)="deleteMovie(movies)"><i class="fas fa-trash"></i></a>
                     <!-- [routerLink]="['/info']" -->
                 </span> 
