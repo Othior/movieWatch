@@ -9,15 +9,21 @@
 }
 .btnAddMovie{
     border: none;
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
     border : 1px solid #8E39E3;
     border-top-right-radius:50px;
     border-bottom-right-radius:50px;
     border-top-left-radius:0px;
     border-bottom-left-radius:0px;
-    width: 20%;
+    margin-bottom: 5px;
+    width: 5rem;
 }
 .btnAddMovie:hover{
     border : 1px solid #39363D;
+    margin-bottom: 5px;
+    width: 5rem;
 }
 label{
     text-align: center;
@@ -30,4 +36,35 @@ label{
 }
 .blockInput{
     margin: 2rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.blockBtnAddMovie{
+    /* width: 10rem; */
+}
+@media screen and (min-width:880px) and (max-width:1130px){
+    .container{
+        width: 80vw;
+        /* background-color: yellow */
+    }
+}
+
+@media screen and (min-width:500px) and (max-width:880px){
+    .container{
+        width: 80vw;
+        /* background-color: yellow */
+    }
+    /* .blockInput{
+        width: 70vw;
+    } */
+}
+@media screen and (min-width:300px) and (max-width:680px){
+    .container{
+        width: 90vw;
+    }
+    .blockMovie a{
+        font-size: 25px;
+    }
+    
 }
