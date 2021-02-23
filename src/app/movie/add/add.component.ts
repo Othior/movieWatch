@@ -25,7 +25,7 @@ export class AddComponent implements OnInit {
     })
 
     setTimeout(()=>{
-      alert("the task is complited :D");
+      alert("the task is completed :D");
     },2000)
 
   }

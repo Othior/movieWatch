@@ -23,15 +23,15 @@ export class EditComponent implements OnInit {
   public editTitleMovie;
 
   public editMovie(formulaire :NgForm): void {
-    console.log('this id => ', this.id);
+    // console.log('this id => ', this.id);
     this.moviesService.deleteMovie(this.id).then();
-    console.log('formulaire form value titleMovie => ', formulaire.form.value.titleMovie);
+    // console.log('formulaire form value titleMovie => ', formulaire.form.value.titleMovie);
     
     this.moviesService.editMovie(formulaire.form.value.titleMovie).set({
       title:formulaire.form.value.titleMovie
     })
     setTimeout(()=>{
-      alert('the task is complited');
+      alert('the task is completed');
       this.router.navigate(['']);
     },1000)
   }

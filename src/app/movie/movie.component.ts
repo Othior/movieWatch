@@ -22,7 +22,6 @@ export class MovieComponent implements OnInit {
   ngOnInit(): void {
     this.service.getList().then(data => {
       data.forEach(doc => {
-        console.log(doc.id, ' =>', doc.data());
         this.listMovie.push(doc.data().title);
       });
     });
@@ -49,14 +48,9 @@ export class MovieComponent implements OnInit {
   }
 
   public randomMovie() {
-
-    // console.log('movie => ', this.listMovie[this.nbRand]);
-    // console.log('id => ', this.nbRand);
     
     setTimeout(() => {
       this.nbRand = this.random(this.listMovie.length);
-      console.log('movie settimeout => ', this.listMovie[this.nbRand]);
-      console.log('id settimeout => ', this.nbRand);
       alert(this.listMovie[this.nbRand] + ' see you soon :D');
       this.nbRand = 0;
     }, 2000)

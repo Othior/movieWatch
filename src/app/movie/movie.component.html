@@ -4,6 +4,7 @@
         <a class="btn randMovie" (click)="randomMovie()">Random Movie</a>
     </div>
     <div class="listMovie">
+        <span class="contentList">List to watch : </span>
         <ul>
             <li class="movies" *ngFor="let movies of listMovie"> {{ movies }} 
                 <span id="id_{{ movies }}">

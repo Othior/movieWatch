@@ -56,6 +56,10 @@ li{
 .blockMovie a:first-child {
     margin-left: 1rem;
 }
+.contentList{
+    font-weight: bold;
+    font-style: italic;
+}
 @media screen and (min-width:880px) and (max-width:1130px){
     .container{
         width: 80vw;
