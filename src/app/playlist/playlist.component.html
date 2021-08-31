@@ -12,7 +12,7 @@
     <ul>
         <li class="movies" *ngFor="let playlist of listPlaylist"> {{ playlist }} 
             <span id="id_{{ playlist }}">
-                <a class="deleteMovie" (click)="deletePlaylist(playlist)"><i class="fas fa-trash"></i></a>
+                <!-- <a class="deleteMovie" (click)="deletePlaylist(playlist)"><i class="fas fa-trash"></i></a> -->
                 <a class="deleteMovie" (click)="movePlaylist(playlist)"><i class="fas fa-arrow-right"></i></a>
             </span> 
         </li>
