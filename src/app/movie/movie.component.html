@@ -1,7 +1,8 @@
 <div class="container">
     <div class="blockMovie">
-        <a class="btn addMovie" [routerLink]="['/add-movie']" >Add Movie</a>
+        <a class="btn addMovie" [routerLink]="['add-movie']" >Add Movie</a>
         <a class="btn randMovie" (click)="randomMovie()">Random Movie</a>
+        <a class="btn" [routerLink]="['']">Return List Movies</a>
     </div>
     <div class="listMovie">
         <span class="contentList">List to watch : </span>
@@ -10,9 +11,9 @@
                 <span id="id_{{ movies }}">
                     <a class="editMovie" (click)="editMovie(movies)"><i class="fas fa-pencil-alt"></i></a> 
                     <a class="deleteMovie" (click)="deleteMovie(movies)"><i class="fas fa-trash"></i></a>
-                    <!-- [routerLink]="['/info']" -->
                 </span> 
             </li>
         </ul>
     </div>
+    <!-- <Playlist></Playlist> -->
 </div>

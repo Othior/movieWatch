@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import firebase from 'firebase';
-import { db } from '../../firebase/fire'
+import { MovieService } from 'src/app/service/movie.service';
 
 @Component({
   selector: 'app-add',
@@ -10,24 +9,29 @@ import { db } from '../../firebase/fire'
 export class AddComponent implements OnInit {
 
   public titleMovie: string;
+  public playlist :string = JSON.parse(localStorage.getItem("idPlaylist"))
 
-  constructor() { }
+  constructor(
+    private serviceMovie:MovieService
+    ) { }
 
   ngOnInit(): void {
   }
 
   public addMovie(): void {
-    this.titleMovie
-    console.log("title Movie => ", this.titleMovie);
+    
+    this.serviceMovie.createMovie(this.titleMovie,this.playlist).then(doc => {
+        setTimeout(()=>{
+        alert("the task is completed :D");
+        },2000)
+        
+    }).catch(err => {
+      console.log("err => ", err)
+    });
 
-    db.collection("titleMovie").doc(this.titleMovie).set({
-      title:this.titleMovie
-    })
-
-    setTimeout(()=>{
-      alert("the task is completed :D");
-    },2000)
+    
 
   }
 
+  
 }

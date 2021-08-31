@@ -1,0 +1,43 @@
+a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover{
+    color: #8E39E3;
+}
+.listMovie{
+    width:40vw;
+    height: auto;
+    color: white;
+}
+.movies{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+    text-align: left;
+    padding-bottom: 1rem;
+    border-bottom:1px solid #8E39E3;
+}
+.movies span{
+    display: flex;
+}
+.contentList{
+    font-weight: bold;
+    font-style: italic;
+}
+.blockMovie a:first-child {
+    margin-left: 1rem;
+}
+.blockInput{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: baseline;
+    justify-content: center;
+}
+.btnAddPlaylist{
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    padding: 16px;
+}

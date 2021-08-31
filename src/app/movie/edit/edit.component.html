@@ -4,11 +4,11 @@
     </div>
     <div class="blockAddMovie">
         <label for="">Title Movie / Serie</label>
-        <form #form="ngForm" (ngSubmit)="editMovie(form)" class="blockInput">
-            <input type="text" class="titleMovie" name="titleMovie" id="titleMovie"  #model="ngModel" ngModel="{{ id }}">
+        <div  class="blockInput">
+            <input type="text" class="titleMovie" name="titleMovie" id="titleMovie"  [(ngModel)]="titleMovie">
             <div class="blockBtnAddMovie">
-                <button class="btn btnAddMovie" type="submit"> Edit </button>
+                <button class="btn btnAddMovie" (click)="editMovie()"> Edit </button>
             </div>
-        </form >
+        </div >
     </div>
 </div>

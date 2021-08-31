@@ -7,13 +7,17 @@ import { MovieComponent } from './movie/movie.component';
 import { AddComponent } from './movie/add/add.component';
 import { EditComponent } from './movie/edit/edit.component';
 import { FormsModule } from '@angular/forms';
+import { PlaylistComponent } from './playlist/playlist.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieComponent,
     AddComponent,
-    EditComponent
+    EditComponent,
+    PlaylistComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MovieService } from 'src/app/service/movie.service';
 
@@ -10,7 +9,9 @@ import { MovieService } from 'src/app/service/movie.service';
 })
 export class EditComponent implements OnInit {
 
-  id = JSON.parse(localStorage.getItem("titleId"));
+  public id :string = JSON.parse(localStorage.getItem("titleId"));
+  public titleMovie :string;
+  public playlist :string = JSON.parse(localStorage.getItem("idPlaylist"))
 
   constructor(
     private moviesService: MovieService,
@@ -22,17 +23,16 @@ export class EditComponent implements OnInit {
   
   public editTitleMovie;
 
-  public editMovie(formulaire :NgForm): void {
+  public editMovie(): void {
     // console.log('this id => ', this.id);
-    this.moviesService.deleteMovie(this.id).then();
+    this.moviesService.deleteMovie(this.id,this.playlist).catch(err=> console.log("err => ", err));
     // console.log('formulaire form value titleMovie => ', formulaire.form.value.titleMovie);
     
-    this.moviesService.editMovie(formulaire.form.value.titleMovie).set({
-      title:formulaire.form.value.titleMovie
-    })
+    this.moviesService.createMovie(this.titleMovie,this.playlist).catch(err => console.log("err =>", err));
+
     setTimeout(()=>{
       alert('the task is completed');
-      this.router.navigate(['']);
+      this.router.navigate( [`${this.playlist}/movie/`]); 
     },1000)
   }
 }
