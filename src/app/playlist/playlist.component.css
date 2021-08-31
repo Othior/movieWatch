@@ -11,6 +11,30 @@ a:hover{
     height: auto;
     color: white;
 }
+.btnAddMovie{
+    border: none;
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+    /* border : 1px solid #8E39E3; */
+    border-top-right-radius:50px;
+    border-bottom-right-radius:50px;
+    border-top-left-radius:0px;
+    border-bottom-left-radius:0px;
+    margin-bottom: 5px;
+    width: 5rem;
+}
+.inputPlaylist{
+    border: 1px solid #8E39E3;
+    margin: 1rem 0rem;
+}
+.listMovie span {
+
+}
+.titlePlaylist{
+    text-align: center;
+    color: white;
+}
 .movies{
     display: flex;
     justify-content: space-between;
@@ -39,5 +63,31 @@ a:hover{
 .btnAddPlaylist{
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
-    padding: 16px;
+    padding: 17.2px 16px;
+}
+
+@media screen and (min-width:880px) and (max-width:1130px){
+    .container{
+        width: 80vw;
+        /* background-color: yellow */
+    }
+}
+
+@media screen and (min-width:500px) and (max-width:880px){
+    .container{
+        width: 80vw;
+        /* background-color: yellow */
+    }
+    /* .blockInput{
+        width: 70vw;
+    } */
+}
+@media screen and (min-width:300px) and (max-width:680px){
+    .container{
+        width: 90vw;
+    }
+    .blockMovie a{
+        font-size: 25px;
+    }
+    
 }

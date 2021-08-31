@@ -1,20 +1,22 @@
-<div class="addPlaylist">
-    <label for="">Title of your Playlist</label>
-    <div class="blockInput">
-        <input type="text"  class="titlePlaylist" name="titlePlaylist" [(ngModel)]="titlePlaylist">
-        <div class="blockBtnAddPlaylist">
-            <button class="btn btnAddPlaylist" (click)="createPlaylist()"> Add </button>
+<div class="container">
+    <label class="titlePlaylist" for="">Title of your Playlist</label>
+    <div class="btnAddMovie">
+        <div class="blockInput">
+            <input type="text"  class="inputPlaylist" name="titlePlaylist" [(ngModel)]="titlePlaylist">
+            <div class="blockBtnAddPlaylist">
+                <button class="btn btnAddPlaylist" (click)="createPlaylist()"> Add </button>
+            </div>
         </div>
     </div>
-</div>
-<div class="listMovie">
-    <span class="contentList"> Playlist : </span>
-    <ul>
-        <li class="movies" *ngFor="let playlist of listPlaylist"> {{ playlist }} 
-            <span id="id_{{ playlist }}">
-                <!-- <a class="deleteMovie" (click)="deletePlaylist(playlist)"><i class="fas fa-trash"></i></a> -->
-                <a class="deleteMovie" (click)="movePlaylist(playlist)"><i class="fas fa-arrow-right"></i></a>
-            </span> 
-        </li>
-    </ul>
+    <div class="listMovie">
+        <span class="contentList"> Playlist : </span>
+        <ul>
+            <li class="movies" *ngFor="let playlist of listPlaylist"> {{ playlist }} 
+                <span id="id_{{ playlist }}">
+                    <!-- <a class="deleteMovie" (click)="deletePlaylist(playlist)"><i class="fas fa-trash"></i></a> -->
+                    <a class="deleteMovie" (click)="movePlaylist(playlist)"><i class="fas fa-arrow-right"></i></a>
+                </span> 
+            </li>
+        </ul>
+    </div>
 </div>
